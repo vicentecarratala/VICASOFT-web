@@ -1,0 +1,109 @@
+   img{width:200px;}
+   /* Reset básico */
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: sans-serif;
+      background-color: #f4f4f4;
+      line-height: 1.6;
+    }
+
+    /* Header y footer en azul */
+    header, footer {
+      background-color: blue;
+      color: white;
+      padding: 20px;
+      text-align: center;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+
+    /* Enlaces y botones como botones azules con sombra */
+    a, button {
+      background-color: blue;
+      color: white;
+      padding: 10px 15px;
+      text-decoration: none;
+      border: none;
+      border-radius: 4px;
+      margin: 5px;
+      cursor: pointer;
+      display: inline-block;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+      transition: background-color 0.3s;
+    }
+
+    a:hover, button:hover {
+      background-color: green;
+    }
+
+    nav ul {
+      list-style: none;
+      text-align: center;
+      margin: 10px 0;
+    }
+
+    nav ul li {
+      display: inline-block;
+    }
+
+    nav ul li a {
+      margin: 5px;
+    }
+
+    main section {
+      background-color: white;
+      margin: 30px;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    }
+
+    main section > div {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: center;
+    }
+
+    main section article {
+      flex: 1 1 auto;
+      max-width: calc(100% / 6 - 20px); /* Ajusta según el número de cajas en cada sección */
+      min-width: 150px;
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+      position: relative;
+      counter-increment: bloque;
+    }
+
+    main section article::before {
+      content: counter(bloque) ". ";
+      position: absolute;
+      top: 10px;
+      left: 10px;
+      font-weight: bold;
+      font-size: 1.2em;
+      color: gray;
+    }
+
+    #hero {
+      text-align: center;
+      padding: 40px 20px;
+      background-color: #ffffff;
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+      margin: 30px;
+      border-radius: 8px;
+    }
+
+    .hero-content > div {
+      margin-top: 20px;
+    }
+
+    footer {
+      margin-top: 40px;
+    }
